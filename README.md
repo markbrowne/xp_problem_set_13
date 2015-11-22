@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Most applications have these pesky, ill-intentioned creatures known as users. Users, while the life blood of your application, can also be the source of [many troubles](https://xkcd.com/327/). In this application we won't worry so much about security concerns like SQLi - in part because there is no chance of one (we aren't using SQL) - and will instead just focus on registering users and giving them access to a profile page.
+Most applications have these pesky, ill-intentioned creatures known as users. Users, while the life blood of your application, can also be the source of [many troubles](https://xkcd.com/327/). In this application we won't worry so much about security concerns like SQLi - in part because there is no chance of one (we aren't using SQL) - and will instead just focus on registering users and giving them access to a listing of Hotels (as described below).
 
 ***This application should use TDD from start to finish.*** From an architecture standpoint, this application should use Express and [Mongoose](http://mongoosejs.com/).
 
