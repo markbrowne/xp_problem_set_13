@@ -59,3 +59,10 @@ As an end user, I would like to have a more detailed view appear when I click on
 #### Setup
 
 Fork and clone this repository so that you may make commits of your work along the way. To Fork a repository, click on the "Fork" button at the top right of this page. Next, from the Forked repository page, copy the clone URL and clone this locally using `git clone [URL copied from forked repository]`. When you have made commits, use `git push origin master` to push them up to the remote (Github).
+
+## Reflection
+
+1. Did we write tests before code at all points in time?
+1. Did we communicate openly and effectively?
+1. Did one member of the pair dominate the session?
+1. Was there a specific pairing technique that was effective?
