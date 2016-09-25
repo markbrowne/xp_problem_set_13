@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Products and Categories</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <script type="text/javascript" src="javascripts/index.js"></script>
+</head>
+
+<body>
+  <fieldset>
+    <legend>New Product Form</legend>
+    <form>
+      <p>
+        <label for="productName">Name</label>
+        <input type="text" id="productName" />
+      </p>
+      <p>
+        <label for="productPrice">Price</label>
+        <input type="text" id="productPrice" />
+      </p>
+      <p>
+        <label for="productDescription">Desription</label>
+        <input type="text" id="productDescription" />
+      </p>
+      <p>
+        <label><input type="checkbox" id="productCategory1" /> Category 1</label>
+        <label><input type="checkbox" id="productCategory2" /> Category 2</label>
+        <label><input type="checkbox" id="productCategory3" /> Category 3</label>
+      </p>
+      <p>
+        <input id="productSubmit" type="button" value="Create Product" />
+      </p>
+    </form>
+  </fieldset>
+
+  <h2>Product List</h2>
+  <ul id="productList">
+  </ul>
+</body>
+
+</html>
