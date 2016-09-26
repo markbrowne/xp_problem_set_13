@@ -7,17 +7,20 @@
   },
   "dependencies": {
     "body-parser": "~1.15.1",
+    "bookshelf": "^0.10.2",
     "cfenv": "^1.0.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.13.4",
     "jade": "~1.11.0",
-    "monk": "^3.1.2",
+    "knex": "^0.12.1",
     "morgan": "~1.7.0",
+    "mysql": "^2.11.1",
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "jasmine": "^2.5.2",
     "mocha": "^3.0.2",
     "protractor": "^4.0.9"
   }

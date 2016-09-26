@@ -1,14 +1,10 @@
-# Working with Promises
-
-## Approach
-
-The idea of a [`Promise`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) has been a game changer for JavaScript developers. Historically, when using `monk` to build Express apps and APIs, we have used the callback style of asynchronous JavaScript programming. For these exercises, instead use a Promise in as many spots as possible where you would normally use a callback. _Note:_ The router in Express will still require you to define a callback function to handle that route (e.g. `router.get('/', function (req, res) { ...});`).
+# Inventory SPA
 
 ## Problems
 
 Complete these exercises in order, using `git` to checkpoint your work as you go along.
 
-As always, it is recommended that you read this entire problem set prior to beginning it so that you understand what you are building towards. Everything presented here uses React and an Express API to build a Single Page Application (SPA). The goal is to use Promises rather than callbacks where it is appropriate.
+As always, it is recommended that you read this entire problem set prior to beginning it so that you understand what you are building towards. Everything presented here should use DOM manipulation and an Express API to build a Single Page Application (SPA).
 
 ### Starting point
 
