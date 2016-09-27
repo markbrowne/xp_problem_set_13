@@ -1,7 +1,8 @@
 require('../helper');
 
 var http = require('http');
-var db = require('../../config/database');
+var db = require('../../config/db');
+var Product = require('../../models/product');
 var server;
 
 before(function() {
@@ -10,9 +11,11 @@ before(function() {
   browser.baseUrl = 'http://localhost:' + server.address().port;
 });
 
-beforeEach(function() {
-  db.get('products').remove({});
-  return browser.ignoreSynchronization = true;
+beforeEach(function(done) {
+  browser.ignoreSynchronization = true;
+  Product.forge().query().del().then(() => {
+    done();
+  });
 });
 
 afterEach(function() {})
