@@ -18,7 +18,7 @@ beforeEach(function(done) {
   });
 });
 
-afterEach(function() {})
+afterEach(function() {});
 
 after(function() {
   server.close();
@@ -29,7 +29,7 @@ describe('Given that a user is on the home page', function() {
     it('Then a new product should appear in the product list', function(done) {
       browser.get('/index.html');
       element(by.id('productName')).sendKeys('Plumbus');
-      element(by.id('productPrice')).sendKeys('$20.00');
+      element(by.id('productPrice')).sendKeys('20.00');
       element(by.id('productDescription')).sendKeys('A regular old Plumbus');
       element(by.id('productSubmit')).click();
 
