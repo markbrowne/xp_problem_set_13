@@ -22,6 +22,7 @@
     "chai": "^3.5.0",
     "jasmine": "^2.5.2",
     "mocha": "^3.0.2",
-    "protractor": "^4.0.9"
+    "protractor": "^4.0.9",
+    "supertest": "^2.0.0"
   }
 }
