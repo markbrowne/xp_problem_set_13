@@ -1,7 +1,9 @@
-node_modules/
-npm-debug.log
-
-*.ipr
-*.iws
+.idea
 *.iml
-.idea/
+target
+build
+project.xcworkspace
+xcuserdata
+bower_components
+node_modules
+.DS_Store
