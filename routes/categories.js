@@ -1,16 +1,19 @@
 var express = require('express');
 var router = express.Router();
-var Product = require('../models/product');
+var Category = require('../models/category');
 
 router.get('/', function(req, res) {
     // TODO: Get products
-    Product.forge({}).fetchAll().then(function(collection) {
+    Category.forge({}).fetchAll().then(function(collection) {
         res.json(collection.toJSON())
     });
 });
 
 router.post('/', function(req, res) {
-    // TODO: Create products
+    var category = new Category(req.body);
+    category.save().then(function(categoryInDB) {
+        res.json(categoryInDB);
+    });
 });
 
 module.exports = router;
