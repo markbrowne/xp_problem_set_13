@@ -41,6 +41,7 @@ describe('Categories', function() {
 
     describe('POST /categories', function() {
         it('inserts a new category into the database', function(done) {
+
             var attrs = {
                 name: 'Books'
             };
@@ -51,10 +52,10 @@ describe('Categories', function() {
                     expect(res.body.name).to.equal('Books');
                     Category.forge({}).fetchAll().then(function(collection) {
                         expect(collection.length).to.equal(1);
+                        expect(res.body.name).to.equal('Books');
                         done();
                     });
                 });
         });
-
     });
 });

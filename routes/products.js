@@ -10,7 +10,30 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-    // TODO: Create products
+    var product = new Product(req.body);
+    product.save().then(function(productInDB) {
+        res.json(productInDB);
+    });
 });
+
+router.put('/:id', function(req, res) {
+    Product.forge({
+        id: req.params.id
+    }).fetch().then(function(product) {
+        product.save(req.body).then(function(productInDB) {
+            res.json(productInDB);
+        })
+    });
+})
+
+router.delete('/:id', function(req, res) {
+    Product.forge({
+        id: req.params.id
+    }).fetch().then(function(product) {
+        product.destroy().then(function() {
+            res.json('deleted');
+        })
+    });
+})
 
 module.exports = router;

@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>Products and Categories</title>
-  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <title>Products and Categories</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <script type="text/javascript" src="javascript/index.js"></script>
 </head>
 
 <body>
-  <!-- TODO: Body -->
+    <div style="width: 100%;">
+        <div style="float:left; width: 60%">
+          <h3>New Product Form</h3>
+          Name <input type="text" name="product" id="productName"><br>
+          Price <input type="text" name="product" id="productPrice"><br>
+          <div style="vertical-align:top">
+          <label>Description</label> <textarea rows="4" cols="50" id="productDescription"></textarea><br>
+          <div id="category"></div>  
+          </div>
+          <input type="button" value="Create Product" id="createProduct">
+        </div>
+        <div style="float:right;">
+          <h3>New Category Form</h3>
+           Name <input type="text" name="category" id="categoryName"><br>
+           <input type="button" value="Create Category" id="createCategory">
+        </div>
+    </div>
+    <div style="clear:both"></div>
 </body>
-
 </html>
