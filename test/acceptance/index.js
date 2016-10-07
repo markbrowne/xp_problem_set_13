@@ -20,12 +20,12 @@ after(function(done) {
         });
         done();
     });
-    Categories.forge({}).fetchAll().then(function(collection) {
-        collection.forEach(function(model) {
-            model.destroy();
-        });
-        done();
-    });
+    // Categories.forge({}).fetchAll().then(function(collection) {
+    //     collection.forEach(function(model) {
+    //         model.destroy();
+    //     });
+    //     done();
+    // });
 });
 
 describe('Express CRUD', function() {
@@ -51,16 +51,18 @@ describe('Express CRUD', function() {
         });
 
         it('Can I dynamically add a new Category checkbox to the DOM', function() {
-
             browser.get('/');
-            element(by.id('categoryName')).sendKeys('Monitors')
+            element(by.id('categoryName')).sendKeys('Food')
+            element(by.id('createCategory')).click()
+            element(by.id('categoryName')).clear()
+            element(by.id('categoryName')).sendKeys('Drink')
             element(by.id('createCategory')).click().then(function() {
                 return new Promise(function(resolve, reject) {
                     element.all(by.name('categories[]')).then(function(items) {
-                        items.length == 1 ? resolve(items.length) : reject('Cant find checkboxes');
+                        items.length == 2 ? resolve(items.length) : reject('Cant find checkboxes');
                     });
                 }).then((result) => {
-                    expect(result).to.equal(1);
+                    expect(result).to.equal(2);
                 }).catch((error) => {
                     throw new Error(error.message)
                 })
